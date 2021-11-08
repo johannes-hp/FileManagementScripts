@@ -27,3 +27,23 @@ FileRemover
     |-mappe.zip (ikke slettet)
     |
     |-fil.tmp (ikke slettet)
+
+ARemover.py fungerer på samme måde som FileRemover.py, men sletter blot filer, hvis navne slutter på "a".
+
+Mappestrukturen vil se sådan ud, efter programmet er kørt:
+
+FileRemover
+|
+|-ARemover.py
+|
+|-ARemoverOutput.txt
+|
+|-ReadMe.md
+|
+|-DinFolder
+    |
+    |-text.txt (ikke slettet)
+    |
+    |-billede.png (ikke slettet)
+    |
+    |-billedea.tif (slettet)
