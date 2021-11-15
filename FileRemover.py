@@ -9,7 +9,7 @@ def file_remover():
                 continue
             else:
                 for file in os.listdir(str(basepath) + "\\" + entry): #loops over files in subdirectory
-                    if file.lower().endswith('tif') or file.lower().endswith('zip') or file.lower().endswith('jpg') or file.lower().endswith('tmp'):
+                    if file.lower().endswith(('tif', 'tif_original', 'tiff', 'zip', 'jpg', 'jpeg', 'tmp')):
                         continue #skips files with the file extensions in the if-statement
                     else:
                         print(file, 'deleted') #prints to terminal
