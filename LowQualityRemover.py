@@ -15,6 +15,6 @@ def low_quality_remover():
             print(file.path, str(int(file.stat().st_size / 1024)) + "KB", "last modified", datetime.fromtimestamp(file.stat().st_mtime), "deleted")
             os.remove(os.path.join(basepath, entry, file)) #deletes file
             with open ("LowQualityRemoverOutput.txt", "a") as fout: #open output file
-              fout.write(str(file.path) + " " + str(file.stat().st_size) + "KB last modified " + str(datetime.fromtimestamp(file.stat().st_mtime)) + " deleted\n") #writes to output file
+              fout.write(str(file.path) + " " + str(int(file.stat().st_size) / 1024) + "KB last modified " + str(datetime.fromtimestamp(file.stat().st_mtime)) + " deleted\n") #writes to output file
               
 low_quality_remover()
